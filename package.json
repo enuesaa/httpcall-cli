@@ -1,5 +1,15 @@
 {
   "name": "simple-string-length-cli",
-  "version": "1.0.0",
-  "license": "MIT"
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "simple-string-length": "bin/simple-string-length.js"
+  },
+  "scripts": {
+    "start": "node bin/simple-string-length.js"
+  },
+  "dependencies": {
+    "commander": "^9.4.0"
+  }
 }
