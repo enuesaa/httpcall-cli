@@ -1,8 +1,9 @@
 {
-  "name": "simple-string-length-cli",
+  "name": "@enuesaa/simple-string-length-cli",
   "version": "0.1.0",
   "type": "module",
   "license": "MIT",
+  "description": "show string length",
   "bin": {
     "simple-string-length": "bin/simple-string-length.js"
   },
