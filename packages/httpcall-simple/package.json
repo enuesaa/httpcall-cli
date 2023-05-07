@@ -1,0 +1,12 @@
+{
+  "name": "@enuesaa/httpcall-simple",
+  "version": "0.1.0",
+  "main": "index.mjs",
+  "license": "MIT",
+  "bin": {
+    "httpcall": "./bin/httpcall"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}

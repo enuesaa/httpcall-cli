@@ -16,3 +16,8 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 |httpcall-simple|(nothing)|
 |httpcall-commander|commander.js|
 |httpcall-meow|meow|
+
+
+## Memo
+考えれば考えるほど NodeJS のランタイムに依存しない方がいいのでは？  
+pkg だとかでバイナリにした方が可搬性が高いんじゃないか、ということ。  
