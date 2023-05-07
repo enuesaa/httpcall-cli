@@ -1,5 +1,6 @@
 # node-cli-compare-httpcall
-Sample app to learn how to create cli with nodejs.  
+Repository to learn how to create cli app with nodejs.  
+
 For that purpose, this repository is monorepo.  
 Each package uses different libraries and implements the same interface below.  
 
@@ -12,12 +13,10 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 ```
 
 ## Packages
-|name|library name|
-|httpcall-simple|(nothing)|
-|httpcall-commander|commander.js|
-|httpcall-meow|meow|
 
+| name | library name | |  
+| ---- | ---- | ---- |
+| httpcall | (nothing) | |  
+| httpcall-commander | commander.js | work in progress.. |
+| httpcall-meow | meow | work in progress.. |
 
-## Memo
-考えれば考えるほど NodeJS のランタイムに依存しない方がいいのでは？  
-pkg だとかでバイナリにした方が可搬性が高いんじゃないか、ということ。  
