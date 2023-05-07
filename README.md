@@ -1,7 +1,7 @@
 # node-cli-compare-httpcall
 Sample app to learn how to create cli with nodejs.  
 For that purpose, this repository is monorepo to compare libraries.  
-Each packages implement same interface below.  
+Each package implements the same interface below.  
 
 ## Command Interface
 ```bash
