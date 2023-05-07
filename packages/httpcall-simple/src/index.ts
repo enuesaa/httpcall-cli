@@ -9,5 +9,13 @@ const parseResult = parseArg(argv)
 if (parseResult.err) {
   rl.write(`${parseResult.toString()}\n`)
   rl.close()
-}
+} else {
+  const parsedArg = parseResult.unwrap()
 
+  const res = await fetch(parsedArg.url, {
+    headers: parsedArg.headers,
+  })
+  const data: any = await res.text()
+  rl.write(data.toString())
+  rl.close()
+}
