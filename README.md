@@ -1,18 +1,18 @@
-# simple-string-length-cli
-almost joke app.  
+# node-cli-compare-httpcall
+Sample app to learn how to create cli with nodejs.  
+For that purpose, this repository is monorepo to compare libraries.  
+Each packages implement same interface below.  
 
-## installation
-~~~sh
-$ npm install -g @enuesaa/simple-string-length-cli
-~~~
+## Command Interface
+```bash
+httpcall post https://example.com --json '{"data":"something"}' --header 'Accept:application/json'
+{
+  "data": "response"
+}
+```
 
-## usage
-~~~sh
-$ simple-string-length aaa
-3
-~~~
-
-~~~sh
-$ simple-string-length あa
-2
-~~~
+## Packages
+|name|library name|
+|httpcall-simple|(nothing)|
+|httpcall-commander|commander.js|
+|httpcall-meow|meow|
