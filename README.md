@@ -17,6 +17,6 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 | name | library name | |  
 | ---- | ---- | ---- |
 | httpcall | (nothing) | |  
-| httpcall-commander | commander.js | work in progress.. |
+| httpcall-commander | commander.js | |
 | httpcall-meow | meow | work in progress.. |
 
