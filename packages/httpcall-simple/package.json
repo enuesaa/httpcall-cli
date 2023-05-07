@@ -1,12 +1,23 @@
 {
   "name": "@enuesaa/httpcall-simple",
   "version": "0.1.0",
-  "main": "index.mjs",
   "license": "MIT",
-  "bin": {
-    "httpcall": "./bin/httpcall"
+  "type": "module",
+  "engines": {
+    "node": "18.x"
   },
   "scripts": {
-    "start": "node index.mjs"
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1",
+    "ts-results": "^3.3.0",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "ts-node": "^10.9.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
   }
 }
