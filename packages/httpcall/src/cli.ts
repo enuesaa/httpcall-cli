@@ -13,10 +13,10 @@ if (parseResult.err) {
   const parsedArg = parseResult.unwrap()
 
   const res = await fetcher({
-    method: 'POST',
+    method: 'get',
     url: parsedArg.url,
     headers: parsedArg.headers,
-    body: '',
+    body: null,
   })
   console.log(res)
 

@@ -3,15 +3,13 @@
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
-  "exports": "./src/index.ts",
+  "exports": "./dist/index.js",
   "types": "./src/index.ts",
-  "engines": {
-    "node": "18.x"
+  "scripts": {
+    "build": "tsc"
   },
   "dependencies": {
-    "node-fetch": "^3.3.1",
-    "ts-results": "^3.3.0",
-    "tslib": "^2.5.0"
+    "node-fetch": "^3.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.1.0",
