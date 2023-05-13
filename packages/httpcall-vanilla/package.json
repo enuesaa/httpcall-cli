@@ -11,7 +11,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "node-fetch": "^3.3.1",
+    "@enuesaa/httpcall-utils": "file:../utils",
     "ts-results": "^3.3.0",
     "tslib": "^2.5.0"
   },

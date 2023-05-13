@@ -1,7 +1,7 @@
 import * as readline from 'node:readline/promises'
 import { stdin, stdout, argv } from 'node:process'
-import fetch from 'node-fetch'
 import { parseArg } from './parse'
+import { fetcher } from '@enuesaa/httpcall-utils'
 
 const rl = readline.createInterface({ input: stdin, output: stdout })
 
@@ -12,10 +12,14 @@ if (parseResult.err) {
 } else {
   const parsedArg = parseResult.unwrap()
 
-  const res = await fetch(parsedArg.url, {
+  const res = await fetcher({
+    method: 'POST',
+    url: parsedArg.url,
     headers: parsedArg.headers,
+    body: '',
   })
-  const data: any = await res.text()
-  rl.write(data.toString())
+  console.log(res)
+
+  // rl.write(data.toString())
   rl.close()
 }

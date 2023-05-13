@@ -1,18 +1,14 @@
 {
-  "name": "@enuesaa/httpcall-commander",
+  "name": "@enuesaa/httpcall-utils",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
+  "exports": "./src/index.ts",
+  "types": "./src/index.ts",
   "engines": {
     "node": "18.x"
   },
-  "scripts": {
-    "dev": "tsx src/cli.ts",
-    "build": "tsc"
-  },
   "dependencies": {
-    "@enuesaa/httpcall-utils": "file:../utils",
-    "commander": "^10.0.1",
     "node-fetch": "^3.3.1",
     "ts-results": "^3.3.0",
     "tslib": "^2.5.0"
@@ -20,10 +16,6 @@
   "devDependencies": {
     "@types/node": "^20.1.0",
     "ts-node": "^10.9.1",
-    "tsx": "^3.12.7",
     "typescript": "^5.0.4"
-  },
-  "bin": {
-    "httpcall": "bin/httpcall.js"
   }
 }
