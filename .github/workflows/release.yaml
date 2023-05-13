@@ -1,0 +1,23 @@
+name: release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: yarn install
+      - run: yarn build
+      - run: yarn test
+
+      # see https://cam-inc.co.jp/p/techblog/728530570199434396
+      - run: npm publish --access=public -w @enuesaa/httpcall
+      - run: npm publish --access=public -w @enuesaa/httpcall-utils
