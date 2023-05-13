@@ -1,4 +1,4 @@
-# node-cli-compare-httpcall
+# httpcall-cli
 Repository to learn how to create cli app with nodejs.  
 
 For that purpose, this repository is monorepo.  
@@ -16,7 +16,7 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 
 | name | library name | |  
 | ---- | ---- | ---- |
-| httpcall | (nothing) | |  
+| httpcall-vanilla | (nothing) | |  
 | httpcall-commander | commander.js | |
 | httpcall-meow | meow | work in progress.. |
 
