@@ -20,3 +20,8 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 | httpcall-commander | commander.js | |
 | httpcall-meow | meow | work in progress.. |
 
+
+
+## Memo
+- https://github.com/orgs/nodejs/discussions/46298
+- https://github.com/nodejs/node/issues/23868
