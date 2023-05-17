@@ -1,5 +1,5 @@
 {
-  "name": "@enuesaa/httpcall-commander",
+  "name": "@enuesaa/httpcall-meow",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@enuesaa/httpcall-utils": "*",
-    "commander": "^10.0.1"
+    "meow": "^12.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.1.0",
@@ -18,6 +18,6 @@
     "typescript": "^5.0.4"
   },
   "bin": {
-    "httpcall-commander": "bin/httpcall.js"
+    "httpcall-meow": "bin/httpcall.js"
   }
 }

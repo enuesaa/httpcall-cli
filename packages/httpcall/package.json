@@ -12,7 +12,6 @@
   ],
   "dependencies": {
     "@enuesaa/httpcall-utils": "*",
-    "@esbuild-kit/esm-loader": "^2.5.5",
     "ts-results": "^3.3.0",
     "tslib": "^2.5.0"
   },
