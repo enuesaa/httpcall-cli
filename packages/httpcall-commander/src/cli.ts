@@ -1,16 +1,46 @@
 import { program } from 'commander'
 
+/**
+ * @see https://github.com/tj/commander.js/blob/master/examples/defaultCommand.js
+ */
+
 program
   .name('httpcall')
-  .command('post', 'Call http post method.')
+
+program
+  .command('post')
+  .description('Call http post method.')
   .argument('<url>', 'Url')
-  .action((value) => {
-    console.log(value.length)
+  .action((url: string) => {
+    console.log(`post called! url is ${url}`)
   })
 
-// https://stackoverflow.com/questions/44336656/commander-js-display-help-when-called-with-no-commands
-if (process.argv.length < 3) {
-  program.help()
-}
+program
+  .command('get')
+  .description('Call http get method.')
+  .argument('<url>', 'Url')
+  .action((url: string) => {
+    console.log(`get called! url is ${url}`)
+  })
 
-program.parse()
+program
+  .command('put')
+  .description('Call http put method.')
+  .argument('<url>', 'Url')
+  .action((url: string) => {
+    console.log(`put called! url is ${url}`)
+  })
+
+program
+  .command('delete')
+  .description('Call http delete method.')
+  .argument('<url>', 'Url')
+  .action((url: string) => {
+    console.log(`delete called! url is ${url}`)
+  })
+
+/**
+ * Also, you can pass process.argv like this..
+ * program.parse(process.argv);
+ */
+program.parse();

@@ -19,4 +19,3 @@ httpcall post https://example.com --json '{"data":"something"}' --header 'Accept
 | httpcall | (nothing) | |  
 | httpcall-commander | commander.js | |
 | httpcall-meow | meow | work in progress.. |
-
