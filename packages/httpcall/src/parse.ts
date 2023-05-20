@@ -1,7 +1,3 @@
-import type { Result } from 'ts-results'
-import tsresults from 'ts-results'
-const { Err, Ok } = tsresults
-
 type Method = 'get'|'post'|'put'|'delete'
 type Headers = Record<string, string>
 export type ParsedArg = {
@@ -10,17 +6,17 @@ export type ParsedArg = {
   headers: Headers,
 }
 
-export const parseArg = (argv: string[]): Result<ParsedArg, string> => {
+export const parseArg = (argv: string[]): [null|ParsedArg, string] => {
   const [_nodebin, _filename, ...args] = argv
 
   if (args.length === 0) {
-    return new Err('Please pass command.')
+    return [null, 'Please pass command.']
   }
   if (! ['get', 'post', 'put', 'delete'].includes(args[0])) {
-    return new Err('Available commands are "get", "post", "put", or "delete"')
+    return [null, 'Available commands are "get", "post", "put", or "delete"']
   }
   if (args.length === 1) {
-    return new Err('Please pass url.')
+    return [null, 'Please pass url.']
   }
 
   const method = args[0] as Method
@@ -31,7 +27,7 @@ export const parseArg = (argv: string[]): Result<ParsedArg, string> => {
     if (nextIsHeader) {
       const splitted = arg.split(':')
       if (splitted.length !== 2) {
-        return new Err('Invalid header found.')
+        return [null, 'Invalid header found.']
       }
       headers[splitted[0]] = splitted[1]
       nextIsHeader = false
@@ -43,7 +39,7 @@ export const parseArg = (argv: string[]): Result<ParsedArg, string> => {
   }
 
   if (url === null) {
-    return new Err('Please pass url.')
+    return [null, 'Please pass url.']
   }
 
   const parsedArg: ParsedArg = {
@@ -51,5 +47,5 @@ export const parseArg = (argv: string[]): Result<ParsedArg, string> => {
     method,
     headers,
   }
-  return new Ok(parsedArg)
+  return [parsedArg, '']
 }
