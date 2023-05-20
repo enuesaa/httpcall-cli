@@ -1,7 +1,7 @@
-#!/usr/bin/env node --no-warnings --experimental-specifier-resolution node
+#!/usr/bin/env node
 
 /**
  * @see https://numb86-tech.hatenablog.com/entry/2020/06/03/203722
  */
 
-import '../dist/cli'
+import '../dist/cli.js'
