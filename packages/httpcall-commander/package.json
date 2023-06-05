@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx src/cli.ts",
-    "build": "tsx build.ts"
+    "build": "tsx build.ts",
+    "package": "pkg . --target node18-macos-arm64"
   },
   "dependencies": {
     "@enuesaa/httpcall-utils": "*",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@types/node": "^20.1.0",
     "esbuild": "^0.17.19",
+    "pkg": "^5.8.1",
     "ts-node": "^10.9.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
