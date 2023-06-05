@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "commander": "https://esm.sh/v124/commander@10.0.1",
+    "commander/": "https://esm.sh/v124/commander@10.0.1/"
+  },
+  "scopes": {}
+}

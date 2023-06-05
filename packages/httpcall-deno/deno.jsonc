@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "cowsay": "npm:cowsay@1.5.0"
-  },
-  "tasks": {
-    "dev": "deno run src/main.ts"
-  }
-}
